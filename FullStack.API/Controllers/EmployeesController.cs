@@ -50,7 +50,7 @@ namespace FullStack.API.Controllers
         }
 
         [HttpPut]
-        [Route("{id:Guid")]
+        [Route("{id:Guid}")]
         public async Task<IActionResult> UpdateEmployee([FromRoute] Guid id, [FromBody] Employee updateEmployeeRequest)
         {
             var employee = await _fullStackDbContext.Employees.FindAsync(id);
